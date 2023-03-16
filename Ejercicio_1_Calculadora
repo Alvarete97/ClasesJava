@@ -1,0 +1,51 @@
+
+public class main {
+	
+	private class Operaciones(long x, long y,int a) {
+		if (a==0){
+			return x + y;
+		}if (a ==1){
+			return x - y;
+		}if (a== 2){
+			return x*y;
+		}if (a==3 && y!=0){
+			return x/y;
+		}if (y = 0){
+			System.out.println("El valor introducido como dividendo no está soportado en el sistema, por favor intrduzca uno nuevo");
+			new Operaciones(new Valores(), 3);
+		}else {
+			System.out.println("Ha habido un error en la operación seleccionada, por favor, elija de nuevo");
+			new Operaciones(new Valores(),new Selector());
+		}
+	};
+	
+	
+	private class Valores() {
+		private long var1, var2;
+		System.out.println("Inserte valores para realizar las operaciones");
+		var1 = new long(System.imput());
+		var2 = new long(System.imput());
+		return (var1, var2);
+	};
+	
+	
+	private class Selector() {
+		private int operador;
+		System.out.println("Introduzca el códico numérico para la operación");
+		System.out.println("0- Suma");
+		System.out.println("1- Resta");
+		System.out.println("2- Multiplicación");
+		System.out.println("3- División");
+		operador = new int(System.imput);
+		return operador;
+	};
+	
+	public class main() {
+		import class Valores(), Selector(),Operaciones();
+		System.out.println("Bienvenido a esta calculadora");
+		new int resultado = new Operaciones(new Valores(),new Selector());
+		System.out.println("Gracias por usar esta calculadora");
+		
+	};
+	
+};
