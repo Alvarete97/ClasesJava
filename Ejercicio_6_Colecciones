@@ -1,0 +1,102 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class main {
+
+	
+	
+	
+	public static void  main(String []args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		
+		//Bienvenida y fecha
+		System.out.println("Bienvenido a un generador de colecciones");
+		System.out.println("¿Que tipo de colección desea generar?");
+		System.out.println();
+		System.out.println("1- Set");
+		System.out.println("2- List");
+		System.out.println("3- Map");
+		System.out.println();
+		
+		int gen = sc.nextInt();
+		sc.close();
+		
+		
+		//Asignación de diagnóstico
+		switch (gen) {
+		case(1):{
+			
+			Set<String> productos = new HashSet<>();
+			productos.add("Papaya");
+			productos.add("Aguacate");
+			productos.add("Melocoton");
+			productos.add("Manzana");
+			productos.add("Ciruela");
+			productos.add("Naranja");
+			productos.add("Melon");
+			productos.add("Pera");
+			productos.add("Coco");
+			productos.add("Cereza");
+
+			System.out.println("------------------------  SET  ------------------------");
+			System.out.println("Lista de productos" + productos);
+			System.out.println("-------------------------------------------------------");
+			
+		}break;
+		case(2):{
+			List<String> productos = new ArrayList<>();
+			productos.add("Papaya");
+			productos.add("Aguacate");
+			productos.add("Melocoton");
+			productos.add("Manzana");
+			productos.add("Ciruela");
+			productos.add("Naranja");
+			productos.add("Melon");
+			productos.add("Pera");
+			productos.add("Coco");
+			productos.add("Cereza");
+			
+			System.out.println("------------------------ LISTA ------------------------");
+			System.out.println("Lista de productos" + productos);
+			System.out.println("-------------------------------------------------------");
+			
+		}break;
+		case(3):{
+			
+			Map<String, Integer> Inventario = new HashMap<>();
+			Inventario.put("Manzana", 10);
+			Inventario.put("Pera", 15);
+			Inventario.put("Aguacate", 3);
+			Inventario.put("Limon", 12);
+			Inventario.put("Sandia", 2);
+			Inventario.put("Melon", 8);
+			Inventario.put("Cereza", 5);
+			Inventario.put("Ciruela", 30);
+			Inventario.put("Melocoton", 20);
+			Inventario.put("Coco", 1);
+			
+			System.out.println("------------------------  MAP  ------------------------");
+			System.out.println("Lista de productos" + Inventario);
+			System.out.println("-------------------------------------------------------");
+		}break;
+		default :{
+			System.out.println("Ne se ha reconocido el comando");
+		}break;
+		};
+		
+		//Despedida
+		System.out.println();
+		System.out.println();
+		System.out.println("Gracias por usar la aplicación, esperamos verle de nuevo pronto");
+		
+		}
+}
