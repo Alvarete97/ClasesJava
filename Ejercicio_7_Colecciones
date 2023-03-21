@@ -1,0 +1,94 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class main {
+
+	
+	
+	
+	public static void  main(String []args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		
+		List<String> supermercados = new ArrayList<>();
+		Map<String, Integer> dni = new HashMap<>();
+		Set<String> ciudades = new HashSet<>();
+		
+		//Bienvenida y fecha
+		System.out.println("Bienvenido a esta base de datos de colecciones");
+		System.out.println("Empezamos con una Lista de supermercados");
+		System.out.println("Recuerde introducir al menos 3");
+		System.out.println();
+		
+		for (int contador = 0; contador <3; contador++) {
+			supermercados.add(sc.next());
+			if(contador == 2) {
+				System.out.println("¿Desesa seguir metiendo datos?");
+				System.out.println("1 para seguir");
+				if (sc.nextInt()== 1) {
+					contador--;
+				}
+			}
+			
+		}
+		
+		System.out.println();
+		System.out.println("Seguimos con un map de Personas");
+		System.out.println("Introduzca primero su nombre y luego su DNI");
+		System.out.println("Recuerde introducir al menos 3");
+		System.out.println();
+		
+		for (int contador = 0; contador <3; contador++) {
+			dni.put(sc.next(),sc.nextInt());
+			if(contador == 2) {
+				System.out.println("¿Desesa seguir metiendo datos?");
+				System.out.println("1 para seguir");
+				if (sc.nextInt()== 1) {
+					contador--;
+				}
+			}
+			
+		}
+		
+		System.out.println();
+		System.out.println("Seguimos con un set de ciudades");
+		System.out.println("Introduzca nombre de la ciudad");
+		System.out.println("Recuerde introducir al menos 3");
+		System.out.println();
+		
+		for (int contador = 0; contador <3; contador++) {
+			ciudades.add(sc.next());
+			if(contador == 2) {
+				System.out.println("¿Desesa seguir metiendo datos?");
+				System.out.println("1 para seguir");
+				if (sc.nextInt()== 1) {
+					contador--;
+				}
+			}
+			
+		}
+		
+		System.out.println("------------------------ LIST ------------------------");
+		System.out.println("Lista de Supermercados: \n" + supermercados);
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
+		System.out.println("------------------------  MAP  ------------------------");
+		System.out.println("Lista de Personas con DNI: \n" + dni);
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
+		System.out.println("------------------------  SET  ------------------------");
+		System.out.println("Lista de ciudades: \n" + ciudades);
+		System.out.println("-------------------------------------------------------");
+		
+		
+
+		}
+}
