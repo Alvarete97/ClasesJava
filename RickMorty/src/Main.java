@@ -8,6 +8,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException 
 	{
+		StringBuilder informacion = new StringBuilder();
 		
 		/*-------------------------------- CHARACTER ----------------------------------*/
 		try {
@@ -27,7 +28,7 @@ public class Main {
 			System.out.println("------------------------ CHARACTER ------------------------");
 			System.out.println("-----------------------------------------------------------");
 			System.out.println(" ");
-			StringBuilder informacion = new StringBuilder();
+			//StringBuilder informacion = new StringBuilder();
 			Scanner sc = new Scanner(url.openStream());
 			while (sc.hasNext())
 			{
@@ -62,7 +63,7 @@ public class Main {
 				System.out.println("------------------------- LOCATION ------------------------");
 				System.out.println("-----------------------------------------------------------");
 				System.out.println(" ");
-				StringBuilder informacion = new StringBuilder();
+				//StringBuilder informacion = new StringBuilder();
 				Scanner sc = new Scanner(url.openStream());
 				while (sc.hasNext())
 				{
@@ -97,7 +98,7 @@ public class Main {
 				System.out.println("------------------------- EPISODE -------------------------");
 				System.out.println("-----------------------------------------------------------");
 				System.out.println(" ");
-				StringBuilder informacion = new StringBuilder();
+				//StringBuilder informacion = new StringBuilder();
 				Scanner sc = new Scanner(url.openStream());
 				while (sc.hasNext())
 				{
@@ -112,7 +113,8 @@ public class Main {
 				e.printStackTrace();
 			}
 		
-		
+		Fichero f = new Fichero();
+		f.Escritura(informacion.toString());
 		
 		
 	}
