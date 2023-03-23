@@ -20,7 +20,7 @@ pipeline {
                    text += " Division: ";
                    text += v1 * v2;
                    println text;
-                   writeFile(file: "salida.txt", text: text)
+                   writeFile(file: "C:\\Users\\asalf\\EjerciciosJenkings\\salida.txt", text: text)
                 }
             }
         }
