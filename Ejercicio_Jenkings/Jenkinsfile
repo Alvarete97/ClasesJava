@@ -19,6 +19,7 @@ pipeline {
                    text += v1 * v2;
                    text += " Division: ";
                    text += v1 * v2;
+                   println text;
                    writeFile(file: "salida.txt", text: text)
                 }
             }
