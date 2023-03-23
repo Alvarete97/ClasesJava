@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages{
+        stage("Calculadora"){
+            steps {
+                
+                echo 'Calculadora que solo muestra'
+                script
+                {
+                   def v1 = 2;
+                   def v2 = 5;
+                   println " ";
+                   println "Suma"
+                   println v1 + v2;
+                   println " ";
+                   println "Resta"
+                   println v1 - v2;
+                   println " ";
+                   println "Multiplicacion"
+                   println v1 * v2;
+                   println " ";
+                   println "Division"
+                   println v1 / v2;
+                   println " ";
+                }
+            }
+        }
+        
+    }
+}
