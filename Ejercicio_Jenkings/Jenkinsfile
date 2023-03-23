@@ -10,19 +10,16 @@ pipeline {
                 {
                    def v1 = 2;
                    def v2 = 5;
-                   println " ";
-                   println "Suma"
+                   def text = "Suma: ";
                    println v1 + v2;
-                   println " ";
-                   println "Resta"
-                   println v1 - v2;
-                   println " ";
-                   println "Multiplicacion"
-                   println v1 * v2;
-                   println " ";
-                   println "Division"
-                   println v1 / v2;
-                   println " ";
+                   text += v1 + v2;
+                   text += " Resta: ";
+                   text += v1 - v2;
+                   text += " Multiplicacion: ";
+                   text += v1 * v2;
+                   text += " Division: ";
+                   text += v1 * v2;
+                   writeFile(file: "salida.txt", text: text)
                 }
             }
         }
