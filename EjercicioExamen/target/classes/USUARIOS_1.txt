@@ -1,0 +1,27 @@
+
+{
+.1{
+ 	"Nombre": "Gustavo",
+ 	"Fecha de Nacimiento": 1991/06/04,
+ 	"Fecha de Registro": 2022/09/16,
+	"Ultima Fecha de Login":2022/09/16,
+	"Cantidad de Compras":10,
+	"Pais":"Argentina",
+},
+.2{
+ 	"Nombre": "Carlos",
+ 	"Fecha de Nacimiento": 1999/05/05,
+ 	"Fecha de Registro": 2020/10/10,
+	"Ultima Fecha de Login":2021/10/10,
+	"Cantidad de Compras":5,
+	"Pais":"España",
+},
+.3{
+ 	"Nombre": "Adrián",
+ 	"Fecha de Nacimiento": 1998/06/06,
+ 	"Fecha de Registro": 2021/11/11,
+	"Ultima Fecha de Login":2021/12/12,
+	"Cantidad de Compras":4,
+	"Pais":"España",
+},
+}
