@@ -1,0 +1,63 @@
+[
+{
+ 	"Titulo": "Avatar",
+ 	"Ganancia": 2923706026,
+ 	"Estreno": 2009,
+
+},
+{
+ 	"Titulo": "Avengers: Endgame",
+ 	"Ganancia": 2799439100,
+ 	"Estreno": 2019,
+
+},
+{
+ 	"Titulo": "Avatar: The Way of Water",
+ 	"Ganancia": 2309660236,
+ 	"Estreno": 2022,
+
+},
+{
+ 	"Titulo": "Titanic",
+ 	"Ganancia": 2256126138,
+ 	"Estreno": 1997,
+
+},
+{
+ 	"Titulo": "Star Wars: Episode VII - The Force Awakens",
+ 	"Ganancia": 2071310218,
+ 	"Estreno": 2015,
+
+},
+{
+ 	"Titulo": "Avengers: Infinity War",
+ 	"Ganancia": 2052415039,
+ 	"Estreno": 2018,
+
+},
+{
+ 	"Titulo": "Spider-man: No Way Home",
+ 	"Ganancia": 1921847111,
+ 	"Estreno": 2021,
+
+},
+{
+ 	"Titulo": "Jurassic World",
+ 	"Ganancia": 1671537444,
+ 	"Estreno": 2015,
+
+},
+{
+ 	"Titulo": "The Lion King",
+ 	"Ganancia": 1663075401,
+ 	"Estreno": 2019,
+
+},
+{
+ 	"Titulo": "The Avengers",
+ 	"Ganancia": 1520538536,
+ 	"Estreno": 2015,
+
+}
+
+]
