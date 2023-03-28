@@ -1,18 +1,17 @@
-		//import com.google.gson.*;
-		import org.json.*;
-		import java.io.IOException;
-		import java.net.HttpURLConnection;
-		import java.net.MalformedURLException;
-		import java.net.URL;
-		import java.util.Scanner;
+import org.json.*;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
 		
 public class main {
 			public static void main(String[] args) throws IOException 
 			{
 				
 				/*--- "current_weather" HARCODEADAS ---------------------------------------------------*/
-				double tM = 15.0;
-				double tB = 3.5;
+				double tM = 0.0;
+				double tB = 0.0;
 				/*-------------------------------------------------------------------------------------*/
 				 
 				String resultado = " ";
@@ -38,6 +37,7 @@ public class main {
 						
 						/*--- LECTURA DE FICHERO -----------------------------------------------------*/
 						// Aquí simplemente hace string
+						
 						StringBuilder infoM = new StringBuilder();
 						Scanner sc = new Scanner(urlMdr.openStream());
 						while (sc.hasNext())
@@ -45,6 +45,11 @@ public class main {
 							infoM.append(sc.nextLine());
 						}
 						sc.close();	
+						
+						/*--- Lectura JSON -------------------------------------------------------*/
+						JSONObject jsonMdr = new JSONObject(infoM.toString());
+						JSONObject actualMdr = jsonMdr.getJSONObject("current_weather");
+						tB = actualMdr.getDouble("temperature");
 						
 						if (tM >= 15) {
 							resultado += "\t Condiciones climáticas en Madrid \n" + " Temperatura NO apta para sembrar \n \n \n";
@@ -88,6 +93,11 @@ public class main {
 							}
 							sc.close();	
 							System.out.println(infoB);
+							
+							/*--- Lectura JSON -------------------------------------------------------*/
+							JSONObject jsonBrl = new JSONObject(infoB.toString());
+							JSONObject actualBrl = jsonBrl.getJSONObject("current_weather");
+							tB = actualBrl.getDouble("temperature");
 							
 							if (tB >= 20) {
 								resultado += "\t Condiciones climáticas en Berlin \n" + " Temperatura apta para producción \n \n \n";
