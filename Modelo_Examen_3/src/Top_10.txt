@@ -1,5 +1,4 @@
-{
-[
+
 {
  	"Titulo": "Avatar",
  	"Ganancia": 2923706026,
@@ -59,6 +58,4 @@
  	"Ganancia": 1520538536,
  	"Estreno": 2015,
 
-}
-]
 }
