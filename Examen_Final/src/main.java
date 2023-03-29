@@ -11,22 +11,20 @@ public class main {
 	public static void main(String[] args) 
 	{
 		
-		/*--- VARIABLES -----------------------------------------------------------*/
+		/*--- VARIABLES --------------------------------------------------------------*/
 		String val_final_vuelo = "";
 		List <Vuelos> flys= new ArrayList<>();
-		/*-------------------------------------------------------------------------*/
+		Fichero f = new Fichero();
+		/*----------------------------------------------------------------------------*/
 		
-		
-		
-		/*--- TRY CATCH para gestionar texto ---------------------------------------*/
 		
 		try {
 			
-			/*--- LEEMOS ARCHIVO ---------------------------------------------------*/
-			
+			/*--- LEEMOS ARCHIVO -----------------------------------------------------*/
 			File archivo = new File("src\\TXT_VUELOS.txt");
 			Scanner sc = new Scanner(archivo);
 			sc.nextLine();
+			/*------------------------------------------------------------------------*/
 			
 			
 			/*--- CREAMOS LOS OBJETOS VUELO ------------------------------------------*/
@@ -40,13 +38,16 @@ public class main {
 				}
 			}
 			sc.close();
+			/*------------------------------------------------------------------------*/
+			
 			
 			/*--- VALOR FINAL POR VUELO ----------------------------------------------*/
 			
 			for(int i = 0; i < flys.size(); i++) 
 			{
+				Operaciones o = new Operaciones();
 				val_final_vuelo += " " + flys.get(i).getNombre() + " valor final por vuelo:\n";
-				val_final_vuelo += "\t" + flys.get(i).getValUnit() * flys.get(i).getNPasajero() + "\n";
+				val_final_vuelo += "\t" + o.valorFV(flys.get(i)) + "\n";
 				
 			}
 			/*------------------------------------------------------------------------*/
@@ -88,7 +89,6 @@ public class main {
 				
 				
 			/*--- FICHERO FINAL ------------------------------------------------------*/
-				Fichero f = new Fichero();
 				f.Escritura(val_final_vuelo);	
 			/*------------------------------------------------------------------------*/
 				
