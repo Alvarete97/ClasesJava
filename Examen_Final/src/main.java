@@ -1,16 +1,9 @@
-import java.io.BufferedWriter;
+
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 
 public class main {
 	
@@ -18,9 +11,9 @@ public class main {
 	public static void main(String[] args) 
 	{
 		
-		/*--- VARIABLES para escribir luego ---------------------------------------*/
+		/*--- VARIABLES -----------------------------------------------------------*/
 		String val_final_vuelo = "";
-		
+		List <Vuelos> flys= new ArrayList<>();
 		/*-------------------------------------------------------------------------*/
 		
 		
@@ -31,21 +24,22 @@ public class main {
 			
 			/*--- LEEMOS ARCHIVO ---------------------------------------------------*/
 			
-			File archivo = new File("C:\\Users\\asalf\\eclipse-workspace\\Examen_Final\\src\\TXT_VUELOS.txt");
-			
+			File archivo = new File("src\\TXT_VUELOS.txt");
 			Scanner sc = new Scanner(archivo);
-			List <Vuelos> flys= new ArrayList<>();
-			
 			sc.nextLine();
+			
 			
 			/*--- CREAMOS LOS OBJETOS VUELO ------------------------------------------*/
 			while(sc.hasNextLine()) {
 				String lineas = sc.nextLine();
 				Scanner lsc = new Scanner(lineas);
 				flys.add(new Vuelos(lsc.next(),Integer.parseInt(lsc.next()),lsc.next(),Integer.parseInt(lsc.next()),lsc.next()));
+				
+				if(sc.hasNext() == false) {
+					lsc.close();
+				}
 			}
-			
-			//System.out.println(flys);
+			sc.close();
 			
 			/*--- VALOR FINAL POR VUELO ----------------------------------------------*/
 			
@@ -55,50 +49,25 @@ public class main {
 				val_final_vuelo += "\t" + flys.get(i).getValUnit() * flys.get(i).getNPasajero() + "\n";
 				
 			}
-			
-				//System.out.println(val_final_vuelo);
 			/*------------------------------------------------------------------------*/
+			
 			
 			/*--- DIAS DE DIFERENCIA -------------------------------------------------*/
 				
 			for(int i = 0; i < flys.size(); i++) 
 			{
-				val_final_vuelo += " " + flys.get(i).getNombre() + " días restantes para el vuelo:\n";
-				val_final_vuelo += "\t" + flys.get(i).tiempoRestante()+ "\n";
-					
+				Operaciones o = new Operaciones();
+				val_final_vuelo += o.valorFinalV(flys.get(i));	
 			}
-				
-				//System.out.println(val_final_vuelo);
 			/*------------------------------------------------------------------------*/
 				
+			
 			/*---  SEGMENTACION ------------------------------------------------------*/
 			for(int i = 0; i < flys.size(); i++) 
 			{
-				//System.out.println(flys.get(i).getTipo() + "\t" + (flys.get(i).getValUnit() * flys.get(i).getNPasajero()));
-				//System.out.println(flys.get(i).getTipo() == "ECONOMICO");
-				//System.out.println((flys.get(i).getTipo() == "ECONOMICO") && ((flys.get(i).getValUnit() * flys.get(i).getNPasajero()) >= 100));
-			
-				
-				if((flys.get(i).getTipo().equals("ECONOMICO")) && ((flys.get(i).getValUnit() * flys.get(i).getNPasajero()) >= 100)) 
-				{
-					val_final_vuelo += " " + flys.get(i).getNombre() + " es RANTABLE \n";
-					
-				}else if((flys.get(i).getTipo().equals("ECONOMICO")) && ((flys.get(i).getValUnit() * flys.get(i).getNPasajero()) < 100))
-				{
-					val_final_vuelo += " " + flys.get(i).getNombre() + " NO es RANTABLE \n";
-					
-				}else if((flys.get(i).getTipo().equals("PREMIER")) && ((flys.get(i).getValUnit() * flys.get(i).getNPasajero()) >= 1500)) 
-				{
-					val_final_vuelo += " " + flys.get(i).getNombre() + " es RANTABLE \n";
-					
-				}else
-				{
-					val_final_vuelo += " " + flys.get(i).getNombre() + " NO es RANTABLE \n";
-				}	
-						
+				Operaciones o = new Operaciones();
+				o.segmentacion(flys.get(i));			
 			}
-			
-				//System.out.println(val_final_vuelo);
 			/*------------------------------------------------------------------------*/
 				
 				
@@ -108,30 +77,27 @@ public class main {
 				int mF = 0;
 				for(int i = 0; i < flys.size(); i++) 
 				{
-					mF += flys.get(i).getValUnit() * flys.get(i).getNPasajero();
+					Operaciones o = new Operaciones();
+					mF += o.valorFV(flys.get(i));
 				};
+				
 				val_final_vuelo += "\t" + mF;
 				
-				//System.out.println(val_final_vuelo);
-				
 			/*------------------------------------------------------------------------*/
+				
 				
 				
 			/*--- FICHERO FINAL ------------------------------------------------------*/
 				Fichero f = new Fichero();
-				f.Escritura(val_final_vuelo);
-				
-			/*------------------------------------------------------------------------*/
-				
-				
-				
-				
-				
-				
-				
+				f.Escritura(val_final_vuelo);	
 			/*------------------------------------------------------------------------*/
 				
 			
+				
+			/*--- FIN ----------------------------------------------------------------*/	
+				System.out.print("La ejecución del progarma ha finalizado con exito");	
+			/*------------------------------------------------------------------------*/
+	
 		
 		}catch (IOException e) {
 			e.printStackTrace();

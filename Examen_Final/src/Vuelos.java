@@ -1,20 +1,13 @@
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-public class Vuelos {
+public class Vuelos extends Aeropuerto{
 
 	/*--- VARIABLES --------------------------------------------------------*/
 	private String nombre, tipo;
 	private int pasajeros, valor_unit;
 	
-	DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	
-	private LocalDate fecha = LocalDate.now();
-	private String fechaFormateada = fecha.format(dateTimeFormatter);
-	
 	private LocalDate f_vuelo = LocalDate.now();
 	private String f_Vuelo = f_vuelo.format(dateTimeFormatter);
-	
 	/*----------------------------------------------------------------------*/
 	
 	
@@ -29,8 +22,8 @@ public class Vuelos {
 		this.f_vuelo = LocalDate.parse(e,dateTimeFormatter);
 		
 	}
-	
 	/*----------------------------------------------------------------------*/
+	
 	
 	/*--- GETTERS ----------------------------------------------------------*/
 	

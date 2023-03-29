@@ -8,7 +8,8 @@ public class Fichero implements I_Fichero {
 	public void Escritura(String n_txt) 
 	{
 		try {
-			String ruta = "C:\\Users\\asalf\\eclipse-workspace\\Examen_Final\\src\\Informe_Final.txt";	
+			
+			String ruta = "src\\Informe_Final.txt";
 			File archivo = new File(ruta);
 			
 			
