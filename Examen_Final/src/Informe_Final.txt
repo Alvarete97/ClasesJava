@@ -1,18 +1,18 @@
- BUENOS_AIRES valor final por vuelo:
+BUENOS_AIRES-ECONOMICO valor final por vuelo:
 	1000
- BUENOS_AIRES valor final por vuelo:
+ BUENOS_AIRES-PREMIER valor final por vuelo:
 	5000
- BARCELONA valor final por vuelo:
+ BARCELONA-ECONOMICO valor final por vuelo:
 	250
- BARCELONA valor final por vuelo:
+ BARCELONA-PREMIER valor final por vuelo:
 	500
- NEW_YORK valor final por vuelo:
+ NEW_YORK-ECONOMICO valor final por vuelo:
 	7500
- NEW_YORK valor final por vuelo:
+ NEW_YORK-PREMIER valor final por vuelo:
 	15000
- TOKYO valor final por vuelo:
+ TOKYO-ECONOMICO valor final por vuelo:
 	15000
- TOKYO valor final por vuelo:
+ TOKYO-PREMIER valor final por vuelo:
 	20000
  BUENOS_AIRES días restantes para el vuelo:
 	88
