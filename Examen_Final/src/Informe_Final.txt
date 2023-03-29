@@ -1,0 +1,42 @@
+ BUENOS_AIRES valor final por vuelo:
+	1000
+ BUENOS_AIRES valor final por vuelo:
+	5000
+ BARCELONA valor final por vuelo:
+	250
+ BARCELONA valor final por vuelo:
+	500
+ NEW_YORK valor final por vuelo:
+	7500
+ NEW_YORK valor final por vuelo:
+	15000
+ TOKYO valor final por vuelo:
+	15000
+ TOKYO valor final por vuelo:
+	20000
+ BUENOS_AIRES días restantes para el vuelo:
+	88
+ BUENOS_AIRES días restantes para el vuelo:
+	88
+ BARCELONA días restantes para el vuelo:
+	422
+ BARCELONA días restantes para el vuelo:
+	422
+ NEW_YORK días restantes para el vuelo:
+	453
+ NEW_YORK días restantes para el vuelo:
+	453
+ TOKYO días restantes para el vuelo:
+	88
+ TOKYO días restantes para el vuelo:
+	88
+ BUENOS_AIRES es RANTABLE 
+ BUENOS_AIRES es RANTABLE 
+ BARCELONA es RANTABLE 
+ BARCELONA NO es RANTABLE 
+ NEW_YORK es RANTABLE 
+ NEW_YORK es RANTABLE 
+ TOKYO es RANTABLE 
+ TOKYO es RANTABLE 
+ MONTO_FINAL: 
+	64250
