@@ -46,9 +46,7 @@ public class main {
 			for(int i = 0; i < flys.size(); i++) 
 			{
 				Operaciones o = new Operaciones();
-				val_final_vuelo += " " + flys.get(i).getNombre()+ "-"+ flys.get(i).getTipo() + " valor final por vuelo:\n";
-				val_final_vuelo += "\t" + o.valorFV(flys.get(i)) + "\n";
-				
+				val_final_vuelo += o.valorFinalVuelo(flys.get(i));
 			}
 			/*------------------------------------------------------------------------*/
 			
@@ -58,7 +56,7 @@ public class main {
 			for(int i = 0; i < flys.size(); i++) 
 			{
 				Operaciones o = new Operaciones();
-				val_final_vuelo += o.valorFinalV(flys.get(i));	
+				val_final_vuelo += o.diasRest(flys.get(i));	
 			}
 			/*------------------------------------------------------------------------*/
 				
