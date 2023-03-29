@@ -1,7 +1,7 @@
 
 public class Operaciones implements I_Operaciones{
 
-	public String valorFinalV(Vuelos v) 
+	public String diasRest(Vuelos v) 
 	{
 		String s = "";
 		s += " " + v.getNombre() + " días restantes para el vuelo:\n";
@@ -9,6 +9,11 @@ public class Operaciones implements I_Operaciones{
 		return s;
 	}
 	
+	public String valorFinalVuelo(Vuelos v) {
+		
+		return " " + v.getNombre()+ "-"+ v.getTipo() + " valor final por vuelo:\n" + 
+				"\t" + valorFV(v) + "\n";
+	}
 	
 	public int valorFV(Vuelos v) 
 	{
