@@ -1,7 +1,7 @@
-
 public interface I_Operaciones {
 
-	public String valorFinalV(Vuelos v);
+	public String diasRest(Vuelos v);
 	public int valorFV(Vuelos v);
 	public String segmentacion(Vuelos v);
+	public String valorFinalVuelo(Vuelos v);
 }
